@@ -13,7 +13,7 @@ module.exports = {
     ],
   },
 
-  devtool:false,
+  devtool: 'source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
