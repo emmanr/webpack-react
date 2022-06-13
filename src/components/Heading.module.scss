@@ -1,0 +1,17 @@
+.hero {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 600px;
+  min-height: 300px;
+
+  background: url('../images/batman.jpeg') no-repeat center top;
+  background-size: cover;
+
+  svg {
+    transform: scale(5);
+    filter: drop-shadow(2px 2px 2px #ffffff);
+  }
+}
+

@@ -10,8 +10,25 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   mode: mode,
 
+  output: {
+    assetModuleFilename: 'images/[hash][ext][query]',
+  },
+
   module: {
     rules: [
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
+        type: 'asset/inline',
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
