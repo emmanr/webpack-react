@@ -1,3 +1,5 @@
+import './styles/style.scss';
+
 const obj1 = {
   name: "Test", numb: 2
 }
