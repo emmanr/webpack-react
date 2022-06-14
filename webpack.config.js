@@ -1,5 +1,6 @@
 const path = require('path');
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -19,10 +20,15 @@ let mode = 'development';
 
 if (process.env.NODE_ENV === 'production') {
   mode = 'production';
+} else {
+  plugins.push(new ReactRefreshWebpackPlugin());
 }
 
 module.exports = {
   mode: mode,
+
+  // might not needed, this is only for bug in ReactRefreshWebpackPlugin
+  entry: './src/index.js',
 
   output: {
     path: path.resolve(__dirname, dist),
