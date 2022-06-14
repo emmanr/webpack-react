@@ -1,7 +1,10 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let mode = 'development';
+
+const PORT = 8080;
 
 if (process.env.NODE_ENV === 'production') {
   mode = 'production';
@@ -46,18 +49,25 @@ module.exports = {
     ],
   },
 
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+       template: 'src/index.html',
+    }),
+  ],
 
   resolve: {
     extensions: ['.js', '.jsx']
   },
 
   devtool: 'source-map',
+
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
     open: true,
     hot: true,
+    port: PORT,
   },
 };
