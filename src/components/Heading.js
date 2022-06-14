@@ -7,6 +7,7 @@ const Heading = () => {
     <>
       <h1>I'm a heading!</h1>
       <p>Lorem ipsum dolor sit amet!</p>
+      <p>Test again</p>
       <div className={classes.hero}>
         <Google />
       </div>
