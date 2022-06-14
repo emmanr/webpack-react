@@ -4,7 +4,7 @@
   "description": "Description later",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "SERVE=true webpack serve",
     "watch": "webpack --watch",
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack",
