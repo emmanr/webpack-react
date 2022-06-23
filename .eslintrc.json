@@ -18,14 +18,13 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "babel", "react", "import", "prettier","react-hooks"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [2,
       { "namedComponents": "arrow-function" }
     ],
-    "arrow-body-style": ["error", "always"],
     "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}]
   }
 }
