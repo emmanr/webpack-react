@@ -11,9 +11,8 @@ const Heading = () => {
       <div className={classes.hero}>
         <Google />
       </div>
-
     </>
-  )
-}
+  );
+};
 
 export default Heading;
