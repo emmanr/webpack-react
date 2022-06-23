@@ -17,9 +17,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "babel", "react", "import", "prettier","react-hooks"
-  ],
+  "plugins": ["react", "import", "prettier","react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [2,
