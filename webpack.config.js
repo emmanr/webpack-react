@@ -12,7 +12,7 @@ const plugins = [
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
-     template: 'src/index.html',
+    template: 'src/index.html',
   }),
 ];
 
@@ -27,7 +27,7 @@ if (process.env.SERVE) {
 }
 
 module.exports = {
-  mode: mode,
+  mode,
 
   // might not needed, this is only for bug in ReactRefreshWebpackPlugin
   entry: './src/index.js',
@@ -63,16 +63,16 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
         ],
       },
     ],
   },
 
-  plugins: plugins,
+  plugins,
 
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
 
   devtool: 'source-map',
@@ -83,6 +83,6 @@ module.exports = {
     },
     open: true,
     hot: true,
-    port: PORT
+    port: PORT,
   },
 };
