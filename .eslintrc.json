@@ -1,14 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true,
+    "node": true
   },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -17,12 +20,24 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "import", "prettier","react-hooks"],
+  "plugins": ["react", "import", "prettier", "react-hooks", "jest"],
   "rules": {
+    "no-underscore-dangle": 0,
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [2,
       { "namedComponents": "arrow-function" }
     ],
-    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}]
+    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "import/no-duplicates": "error",
+    "import/no-unresolved": "error",
+    "import/named": "error",
+    "prettier/prettier": "error",
+    "react/no-typos": "error",
+    "react/no-unused-state": "error",
+    "react/jsx-no-bind": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-uses-react": "off"
   }
 }
