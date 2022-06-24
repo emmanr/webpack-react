@@ -34,10 +34,12 @@
     "import/named": "error",
     "prettier/prettier": "error",
     "react/no-typos": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-unused-state": "error",
     "react/jsx-no-bind": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-uses-react": "off"
+    "react/jsx-uses-react": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 }
