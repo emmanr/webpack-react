@@ -32,6 +32,7 @@ typings/
 .env.test
 
 dist
+coverage
 
 
 .DS_Store
